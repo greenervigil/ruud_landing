@@ -1,0 +1,64 @@
+#ua-alert-box {
+    width:100%;
+    color: #fff;
+    text-align: center;
+    background: #5ca3b3;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    padding: 8px 5px 5px 5px;
+    line-height: 14px;
+    font-size: 14px;
+    height: 30px;
+}
+
+#ua-alert-box-close {
+    float: right;
+    cursor: pointer;
+    margin: 0 20px 0 0;
+}
+
+#ua-alert-box.headroom {
+    _position: relative;
+}
+#ua-alert-box.headroom.scrollin-up {
+    position: fixed;
+}
+#ua-alert-box.headroom.scrollin-down {
+    position: relative;
+}
+
+#ua-alert-box a {
+    color: #fff;
+}
+#ua-alert-box.rheem {
+    background: #e70033;
+}
+#ua-alert-box.ruud {
+    background: #8b0e04;
+}
+#ua-alert-box.sure-comfort {
+    background: #5ca3b3;
+}
+.my-history-container {
+    width: 960px;
+    margin: 50px auto;
+}
+.history-product-info {
+
+}
+.history-product-info img {
+    float:left;
+    width: 150px;
+    margin: 0 15px 0 0;
+}
+.history-product-info-details {
+
+}
+.history-product-info-title {
+    font-weight: bold;
+}
+body.ua-alert-box,
+body.ua-alert-box .desktop-headroom{
+    padding-top: 30px;
+}

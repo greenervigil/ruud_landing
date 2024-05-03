@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://media.ruud.com/site/ruuddotcom/resources/hybridcalculator/index.html -->
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./ROIstyles.css">
+    </head>
+<body>
+
+    <div id="cal">
+        <div class="calwrapper">
+            <div class="headerimage">
+            <img src="./ROI-header.jpg" srcset="resources/ROI-header.jpg 1x, resources/ROI-header@2x.jpg 2x">
+            </div>
+            <div class="navholder">
+            <ul class="lavaLampBottomStyle" id="lavanav">
+                <li class="current"><a id="step1btn" href="https://media.ruud.com/site/ruuddotcom/resources/hybridcalculator/index.html#step1">1. Price &amp; Rate</a></li>
+                <li><a id="step2btn" href="https://media.ruud.com/site/ruuddotcom/resources/hybridcalculator/index.html#step2">2. Rebates &amp; Incentives</a></li>
+                <li><a id="step3btn" href="https://media.ruud.com/site/ruuddotcom/resources/hybridcalculator/index.html#step3">3. Return on Investment</a></li>
+            </ul>
+            </div>
+            <div id="roiCalculator">
+                <div id="step1" class="steppanel">
+                    <div class="titlebar">Please confirm the information below is correct.</div>
+                    <div class="incentive-zip-code">
+						Zip Code: <input type="text" name="incentive-zip-code" id="incentive-zip-code" value="" placeholder="Enter your zip code">
+						<input type="hidden" id="incentive-valid-zip-code" value="">
+						<input type="hidden" id="incentive-state" value="">
+					</div>
+                    <div id="roiPriceAndRate">
+                        <div id="roiHybridPrice" class="borderright">
+                            <label for="txtHybridPrice">Estimated Sales Price:</label>
+                            <p>We have prefilled the average national price of a hybrid water heater. Your local price may vary. Please adjust as needed.</p>
+                            <div class="inputholder">$ <input type="text" id="txtHybridPrice"></div>
+                            <div class="toomuch">Estimated cost must be no more than $1500</div>
+                        </div>
+                        <div id="roiAvgEnergyRate">
+                            <label for="txtAvgEnergyRate">AVERAGE ENERGY RATE:</label>
+                            <p> Below please find the average energy rate for your zip code but adjust as needed.<br>Typically, this rate can be found on your utility bill.</p>
+                            <div class="inputholder">$ <input type="text" id="txtAvgEnergyRate"> ¢/KWH</div>
+                        </div>
+                        <span style="clear:both; display:block;"></span>
+                    </div>
+                    <div id="roiReplaceUnit">
+                        <a href="https://media.ruud.com/site/ruuddotcom/resources/hybridcalculator/index.html#" id="goto2" onclick="goto2()" class="bluebtn pi-steps-arrow-next">Next &gt;</a>
+                    </div>
+
+                </div>
+
+                <div id="step2" class="steppanel">
+                    <div class="titlebar">Select Possible Local Rebates &amp; Incentives</div>
+                    <div id="roiRebates">
+                        <div id="roiLocalUtility">
+
+													<form>
+
+													<div class="incentive-list-container">
+
+														<img alt="Previous Incentive" onclick="moveSlider(&#39;left&#39;)" class="pi-incentive-arrow-previous" src="./arrows-left.png" srcset="resources/arrows-left.png 1x, resources/arrows-left2x.png 2x">
+
+														<img alt="Next Incentive" onclick="moveSlider(&#39;right&#39;)" class="pi-incentive-arrow-next" src="./arrows-right.png" srcset="resources/arrows-right.png 1x, resources/arrows-right@2x.png 2x">
+
+														<div class="pi-fade"></div>
+														<div id="slider">
+															<div class="incentive-list" id="incentive-list"></div>
+														</div><!-- /slider -->
+															</div><!-- /incentive-list-container -->
+															<div class="incentive-total">
+																Total $ <input type="text" name="incentive-total" id="incentive-total" value="0">
+													</div>
+													</form>
+
+                        </div>
+
+                        <span style="clear:both; display:block;"></span>
+                    </div>
+
+                     <div id="roiReplaceUnit">
+                        <div id="roiCalculate">
+                            <a href="https://media.ruud.com/site/ruuddotcom/resources/hybridcalculator/index.html#" id="btnBack1" class="bluebtn pi-steps-arrow-previous">&lt; Back</a>
+                            <span><!--<strong>Need Help?</strong> <a href="#">Get Rebates and Incentives near you.</a>--></span>
+                            <a href="https://media.ruud.com/site/ruuddotcom/resources/hybridcalculator/index.html#" id="btnCalculate" class="bluebtn pi-steps-arrow-next">Next &gt;</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div id="step3" class="steppanel">
+                    <div class="titlebar">Total savings for a Ruud Hybrid Water Heater.</div>
+                    <div id="roiResults">
+                    <div class="resultSection" id="sectionInitialInvestment">
+                        <div class="sectiontitle">Initial investment</div>
+                        <div class="barResults" id="investment_Electric">
+                            <span class="resultText">Electric<br>Water Heater</span>
+                            <span class="resultNumber"></span>
+                        </div>
+                        <div class="barResults" id="investment_Hybrid">
+                            <span class="resultText">Hybrid<br>Water Heater</span>
+                            <span class="resultNumber"></span>
+                        </div>
+                    </div>
+                    <div class="resultSection" id="sectionAnnualEnergyOperatingCosts">
+                        <div class="sectiontitle">Annual Energy Operating Costs</div>
+                        <div class="barResults" id="operatingCosts_Electric">
+                            <span class="resultText">Electric<br>Water Heater</span>
+                            <span class="resultNumber"></span>
+                        </div>
+                        <div class="barResults" id="operatingCosts_Hybrid">
+                            <span class="resultText">Hybrid<br>Water Heater</span>
+                            <span class="resultNumber"></span>
+                        </div>
+                    </div>
+                    <div class="resultSection" id="sectionHybridWaterHeater">
+                         <div class="sectiontitle">Hybrid Water Heater - Return on Investment</div>
+														<div class="calloutholder lifetime">
+														    <div class="question" id="lifetimequestion">
+														        <img src="./Question-Mark.png">
+														        <div class="popup" id="lifetimepop"><img src="./lifetime-pop.png"></div>
+														    </div>
+
+														    <p>Lifetime Return<br>on Investment:</p>
+														    <span id="lifetimeReturnOnInvestment">$1399.00</span>
+														</div><!-- /lifetime -->
+                            <div class="calloutholder savings">
+                                <div class="question" id="savingsquestion">
+                                    <img src="./Question-Mark.png">
+                                    <div class="popup" id="savingspop"><img src="./Costs-pop.png"></div>
+                                </div>
+
+                                <p>Annual Energy Operating<br>Costs Savings:</p>
+                                <span id="annualEnergyOperatingCostsSavings"></span>
+                            </div><!-- /savings -->
+                            <div class="calloutholder pays">
+                                <div class="question" id="paysquestion">
+                                    <img src="./Question-Mark.png">
+                                    <div class="popup" id="paypop"><img src="./payback-pop.png"></div>
+                                </div>
+                                <p>Pays for itself in:</p>
+                                <span id="paysForItselfIn"></span>
+                            </div><!-- /pays -->
+                    </div><!-- /sectionHybridWaterHeater -->
+                </div>
+                <div class="pi-pays-for-itself">On average, a Ruud Hybrid Water heater pays for itself in under two years.</div>
+                    <div id="resultsfooter">
+                        <div id="roiStartOver">
+                            <a href="https://media.ruud.com/site/ruuddotcom/resources/hybridcalculator/index.html#" id="btnBack2" class="bluebtn pi-steps-arrow-previous">&lt; Back</a>
+                            <span></span>
+                            <a href="https://media.ruud.com/site/ruuddotcom/resources/hybridcalculator/index.html#" id="btnStartOver" class="bluebtn pi-steps-arrow-start-over">Start Over</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end of cal -->
+    <div class="overlay"></div>
+
+    <script type="text/javascript" src="./jquery-1.11.3(1).min.js"></script>
+    <script type="text/javascript" src="./main(1).js"></script>
+    <script type="text/javascript" src="./roi.js"></script>
+
+<script>
+
+function goto2(){
+    if($('#incentive-zip-code').val()!=''){
+          getStateFromZip();
+      }else{
+          $("#incentive-zip-code").focus();
+    }
+
+}
+
+function getStateFromZip()	{
+
+	$.ajax({
+		url: "https://api.zippopotam.us/us/" + $("#incentive-zip-code").val(),
+		dataType: 'json',
+		success: function(msg){
+
+			if (msg.places[0]['state abbreviation'] != "")
+			{
+                $("#incentive-valid-zip-code").val($("#incentive-zip-code").val());
+                console.log(msg.places[0]['state abbreviation']);
+				$("#incentive-state").val(msg.places[0]['state abbreviation']).trigger('change');
+
+                getRebatesForZip();
+
+			}
+
+		},
+		error: function (xhr, status, error) {
+			alert("Could not connect to server. Please wait a few minutes and retry.")
+		}
+	});
+}
+
+function getRebatesForZip() {
+	$.getJSON("https://rheem.ecorebates.com/api/search/rheem/productRebateDetails.json?zip="+$("#incentive-valid-zip-code").val()+"&sku=XE80T12EH45U0&jsoncallback=?", function(data){
+  		if (data != "")
+  		{
+  			var html = "";
+
+  			$.each( data.EcoRebatesResponse.productRebateDetails["0"].rebatePrograms, function( key, value ) {
+  				console.log(value);
+				if (value.id != "22446")
+				{
+				html += "<div class='pi-rebate-details'>";
+
+					html += "<input type='checkbox' name='incentive-"+(key+1)+"' data-rebate-value='"+value.originalPurchaseRebate.amount+"'"
+
+					if (value.id == "21753")
+						html += " checked='checked'";
+						html += "<h2>"+value.name+"</h2>";
+						html += "<div id='"+(key+1)+"'>";
+						html += "<span>"+value.amountLabel+"</span> ";
+						html += "<span class='pi-claim-value'><a href='"+value.claimFormURL+"' target='_blank'>Claim Form</a></span>";
+/*							html += "<a class='pi-reveal-btn' onclick='showDetails(\""+(key+1)+"\")'>Reveal Details</a>"; */
+							html += "<div class='pi-details'>"; /* pi-display-none */
+
+								html += "<ul>";
+
+								$.each ( value.importantDetails, function ( importantDetailsKey, importantDetailsValue ) {
+									html += "<li>"+importantDetailsValue+"</li>";
+								});
+
+								html += "</ul><ul>";
+
+								$.each ( value.validDates, function ( validDatesKey, validDatesValue ) {
+									html += "<li>"+validDatesValue+"</li>";
+								});
+
+								html += "</ul>";
+
+/*								html += "<button class='pi-hide-btn' onclick='hideDetails(\""+(key+1)+"\");'>Hide Details</button>"; */
+							html += "</div><!-- /pi-details -->";
+						html += "</div>";
+				html += "</div>"; /* /pi-rebate-details */
+				}
+			});
+
+  			$("#incentive-list").html(html);
+  			refreshCheckboxEvents();
+  			updateTotalRebateValue();
+  		}
+	//}
+	});
+}
+
+function hideDetails(div) {
+	event.preventDefault();
+	$( '#'+div+' .pi-details' ).removeClass('pi-display-block');
+	$( '#'+div+' .pi-details' ).addClass('pi-display-none');
+	$( '#'+div+' .pi-reveal-btn' ).removeClass('pi-display-none');
+	$( '#'+div+' .pi-reveal-btn' ).addClass('pi-display-block');
+}
+
+function showDetails(div) {
+	event.preventDefault();
+	$( '#'+div+' .pi-details' ).removeClass('pi-display-none');
+  	$( '#'+div+' .pi-details' ).addClass('pi-display-block');
+  	$( '#'+div+' .pi-reveal-btn' ).addClass('pi-display-none');
+  	$( '#'+div+' .pi-reveal-btn' ).removeClass('pi-display-block');
+}
+
+function refreshCheckboxEvents() {
+	$('input', $('#incentive-list')).each(function () {
+		$(this).change(function() {
+			updateTotalRebateValue();
+		});
+	});
+}
+
+function updateTotalRebateValue() {
+	var rebateValue = 0;
+	$('input', $('#incentive-list')).each(function () {
+    	if ($(this).prop('checked'))
+    	{
+    		rebateValue += $(this).data('rebate-value');
+    	}
+	});
+	$("#incentive-total").val(rebateValue);
+}
+
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+</script>
+
+
+
+</body></html>

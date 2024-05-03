@@ -1,0 +1,1068 @@
+/* initially hide all groups (even before JS is loaded), so the page will never render them while loading */
+[data-class="wpcf7cf_group"], .wpcf7cf_remove, .wpcf7cf_add {
+    display:none;
+}
+
+.wpcf7cf_repeater_sub {
+    margin-bottom: 20px;
+}
+
+.wpcf7cf_repeater_controls, .wpcf7cf_step_controls {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.wpcf7cf_multistep .wpcf7cf_step {
+    /* display:none; */
+    width: 100%;
+}
+
+.wpcf7cf_multistep .wpcf7cf_step .step-title {
+    display: none;
+}
+
+.wpcf7cf_multistep .wpcf7cf_steps-dots {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.wpcf7cf_multistep .wpcf7cf_steps-dots .dot .step-index {
+    display: inline-block;
+    border-radius: 50%;
+    background: #dfdfdf;
+    color: #000000;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.wpcf7cf_multistep .wpcf7cf_steps-dots .dot {
+    border-bottom: 5px solid #dfdfdf;
+    text-align: center;
+    flex: 1;
+    padding: 15px;
+    min-width: 120px;
+}
+.wpcf7cf_multistep .wpcf7cf_steps-dots .dot.completed {
+    border-bottom: 5px solid #333;
+}
+.wpcf7cf_multistep .wpcf7cf_steps-dots .dot.active {
+    border-bottom: 5px solid #333;
+    font-weight: bold;
+}
+
+.wpcf7cf_multistep .wpcf7cf_steps-dots .dot.completed .step-index {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.wpcf7cf_multistep .wpcf7cf_steps-dots .dot.active .step-index {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.wpcf7cf_step_controls .disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: .5;
+}
+
+/*
+Theme Name: Ruud.net
+Author: Anonymous
+Author URI:
+Version: 1
+Description: Base theme for Wordpress
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: base
+Tags: one-column, two-columns
+Theme URI:
+*/
+
+.small-txt {
+    text-transform: none;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0;
+}
+
+body.home .carousel .pagination {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+body.home .carousel .pagination ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body.home .carousel .pagination li {
+    display: inline-block;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #aaa;
+    margin: 0 5px;
+}
+
+body.home .carousel .pagination li.active {
+    background-color: #8b0e04;
+}
+
+body.home .carousel .pagination li a {
+    display: block;
+    text-indent: 999px;
+    overflow: hidden;
+}
+
+.sHybrid,
+.sSRSeries {
+    overflow: hidden;
+}
+
+.slideHybrid {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/ruud-hybridg5-homeback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 580px;
+    background-position: center center;
+}
+
+.sHybrid .slideHybrid-object {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 816px;
+    max-width: 100%;
+}
+
+.slideSustainability {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/sustainability/images/ruudSusHomeHeroBack.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    background-position: center center;
+}
+
+.slideSmartElectric {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/ruudSmartElectricback2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1019px;
+    background-position: center center;
+}
+
+.sSmartElectric h1 {
+    margin-top: 100px;
+}
+
+.slideReliablity {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/reliability/ruud-reliability-hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    background-position: center center;
+}
+
+.slideEconet {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/econet-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    background-position: center center;
+}
+
+.slideComHP {
+    background-image: url("https://media.ruud.com/wp-content/uploads/sites/2/2021/12/ruud_comhp_slideback2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    background-position: center left;
+}
+
+.slideCombiBoiler {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/ruudCombiBoiler-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 970px;
+    background-position: center center;
+}
+
+.slide0 {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/renaissance-bkg.jpg");
+    background-repeat: no-repeat center center;
+    background-size: cover;
+    height: 800px
+}
+
+.slide1 {
+    background-image: url("https://rmc-cdn.s3.amazonaws.com/site/ruuddotcom/_WP/img/homepage-slideshow/RuudTritonHomeslide2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 670px;
+}
+
+.slide2 {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/RHM4990_RuudHero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px
+}
+
+.slide3 {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/RHM4803_Hero-Graphics.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px
+}
+
+.slide4 {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/Introducing-the-All-New-Ruud-Hybrid-Electric-Water-Heater.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px
+}
+
+.slide5 {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/Standard-Power-To-the-Shower.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px
+}
+
+.slide6 {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/Ruud_Lifestyle_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px
+}
+
+.slide7 {
+    background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/Ruud_Lifestyle_3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px
+}
+
+.ultra {
+    background-image: url("https://rmc-cdn.s3.amazonaws.com/site/ruuddotcom/_WP/img/homepage-slideshow/ultra-slideback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 780px;
+}
+
+.sultra h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sultra p {
+    font-size: 25px;
+    line-height: 1.2;
+    margin: 20px 0px;
+    display: block;
+    color: #fff;
+    text-shadow: -3px 3px 3px rgba(41, 40, 40, 0.5);
+}
+
+.sultra p br {
+    display: none;
+}
+
+.sultra .ultra-object {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.sultra .ultra-object img {
+    width: auto;
+    max-width: 90vw;
+}
+
+.endeavor .w2 {
+    background-image: url("https://rmc-cdn.s3.amazonaws.com/site/ruuddotcom/_WP/img/homepage-slideshow/endeavorslide-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+}
+
+.endeavor h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.endeavor p {
+    font-size: 25px;
+    line-height: 1.2;
+    margin: 20px 0px;
+    display: block;
+    color: #fff;
+    text-shadow: -3px 3px 3px rgba(41, 40, 40, 0.5);
+}
+
+.endeavor .object {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    transform: translateX(0%);
+}
+
+.endeavor .object img {
+    width: auto;
+    max-width: 90vw;
+}
+
+.lseries .w2 {
+    background-image: url("https://rmc-cdn.s3.amazonaws.com/site/ruuddotcom/_WP/img/homepage-slideshow/L-series-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+}
+
+.lseries h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.lseries p {
+    font-size: 25px;
+    line-height: 1.2;
+    margin: 20px 0px;
+    display: block;
+    color: #fff;
+    text-shadow: -3px 3px 3px rgba(41, 40, 40, 0.5);
+    text-transform: uppercase;
+}
+
+.lseries .object {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    transform: translateX(0%);
+}
+
+.lseries .object img {
+    width: auto;
+    max-width: 90vw;
+}
+
+.taxcreds .w2 {
+    background-image: url("https://rmc-cdn.s3.amazonaws.com/site/ruuddotcom/_WP/img/homepage-slideshow/taxcreditslide-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+}
+
+.taxcreds h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.taxcreds p {
+    font-size: 25px;
+    line-height: 1.2;
+    margin: 20px 0px;
+    display: block;
+    color: #fff;
+    text-shadow: -3px 3px 3px rgba(41, 40, 40, 0.5);
+}
+
+.taxcreds .object {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    transform: translateX(0%);
+}
+
+.taxcreds .object img {
+    width: auto;
+    max-width: 70vw;
+}
+
+
+.s1 h1 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.s1 .slide1-object {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.s1 .slide1-object img {
+    width: auto;
+    max-width: 50vw;
+}
+
+.sSustainability .slideSustainability-object {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.sSustainability .btn-menu {
+    border-radius: 8px;
+    margin: 20px 0;
+    color: #76232f;
+    background-color: #fff;
+    width: 200px;
+    padding: 10px;
+}
+
+.sSustainability h1 {
+    color: #827a04;
+    text-shadow: none;
+}
+
+.sSustainability img.icon {
+    width: auto;
+    margin-bottom: 40px;
+}
+
+.sSustainability .sub-title {
+    line-height: 35px;
+}
+
+
+.slideSRSeries {
+    background-image: url("https://media.ruud.com/wp-content/uploads/sites/2/2022/08/SRSeries-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 880px;
+    background-position: center center;
+}
+
+.sSRSeries .slideSRSeries-object {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 816px;
+    max-width: 100%;
+}
+
+.sSRSeries .title-block {
+    width: 70%;
+}
+
+
+
+.sReliablity .slideReliablity-object {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.sReliablity .btn-menu {
+    border-radius: 8px;
+    width: 160px;
+    margin: 20px 0;
+}
+
+.sReliablity h1 {
+    line-height: 72px;
+}
+
+.sReliablity .sub-title {
+    font-size: 30px;
+}
+
+.slideEconet-object>picture>img {
+    width: 165px;
+}
+
+.sEconet>.slide-content>.slide-holder>.title-block {
+    margin-top: -40px;
+}
+
+.sEconet>.slide-content>.slide-holder>.image-block>a.more {
+    margin-left: 25px;
+}
+
+.visual.slideComHP-object {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.slideComHP-object img {
+    max-width: 50vw;
+}
+
+.sComHP>.slide-content>.slide-holder>.title-block {
+    width: auto;
+}
+
+.sComHP>.slide-content>.slide-holder>.title-block h1 {
+    font-size: 40px;
+    color: #343434;
+    text-shadow: -3px 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.carousel .sComHP .sub-title {
+    width: 55%;
+    font-size: 18px;
+    text-transform: none;
+    line-height: 1.2 !important;
+    color: #343434;
+    text-shadow: none;
+}
+
+.carousel .sComHP .btn-menu {
+    display: inline-block;
+    float: right;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.sComHP>.slide-content>.slide-holder>.image-block {
+    pointer-events: none;
+}
+
+
+.sCombiBoiler .slide-content h1 span {
+    font-size: 52px;
+}
+
+.s0>.slide-content>.slide-holder>.title-block>h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+    margin: 50px 0 4px 0;
+}
+
+.s0>.slide-content>.slide-holder>.title-block>.sub-title {}
+
+.s0>.slide-content>.slide-holder>.title-block>p {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin: 10px 0 0 0;
+}
+
+.s0 img {
+    width: 60%;
+}
+
+.s0 .image-block .more {
+    margin-left: 107px;
+    padding-left: 142px;
+}
+
+.slide2-object>picture>img {
+    width: 300px;
+}
+
+.slide3-object>picture>img {
+    width: 165px;
+    position: relative;
+    top: 15px;
+}
+
+.s3>.slide-content>.slide-holder>.title-block {
+    margin-top: -40px;
+}
+
+.s3>.slide-content>.slide-holder>.image-block>a.more {
+    margin-left: 75px;
+}
+
+.slide4-object>picture>img {
+    width: 165px;
+}
+
+.s4>.slide-content>.slide-holder>.title-block {
+    margin-top: -40px;
+}
+
+.s4>.slide-content>.slide-holder>.image-block>a.more {
+    margin-left: 25px;
+}
+
+.slide5-object>picture>img {
+    width: 145px;
+}
+
+.s5>.slide-content>.slide-holder>.title-block {
+    margin-top: -40px;
+}
+
+.s5>.slide-content>.slide-holder>.image-block>a.more {
+    margin-left: 25px;
+    position: relative;
+    top: 50px;
+}
+
+.slide6-object>picture>img {
+    width: 475px;
+}
+
+.s6>.slide-content>.slide-holder>.title-block {
+    margin-top: 50px;
+}
+
+.s6>.slide-content>.slide-holder>.image-block>a.more {
+    margin-left: 300px;
+}
+
+.slide7-object>picture>img {
+    width: 300px;
+}
+
+.s7>.slide-content>.slide-holder>.title-block {}
+
+.s7>.slide-content>.slide-holder>.image-block>a.more {
+    margin-left: 150 px;
+}
+
+
+
+
+/* Responsive Structure ----------------------------------------------- */
+
+/* Maximum width of 479 pixels. */
+@media screen and (max-width: 479px) {
+    ul.dropdown-menu.partsDropDown {
+        display: none;
+    }
+
+    .slide2,
+    .slide3,
+    .slide4,
+    .slide5,
+    .slide6,
+    .slide7,
+    .slideEconet,
+    .slideComHP {
+        height: 600px;
+    }
+
+    .slide2-object>picture>img {
+        width: 250px;
+    }
+
+    .slideEconet,
+    .slideComHP {
+        background-position-x: -430px;
+    }
+
+    .s2>.slide-content>.slide-holder>.image-block>a.more {
+        position: relative;
+        top: 65px;
+    }
+
+    .s3>.slide-content>.slide-holder>.image-block>a.more {
+        position: relative;
+        top: 115px;
+    }
+
+    .s4>.slide-content>.slide-holder>.image-block>a.more {
+        position: relative;
+        top: 115px;
+        margin-left: 100px;
+    }
+
+    .s5>.slide-content>.slide-holder>.image-block>a.more {
+        margin-left: 100px;
+    }
+
+    .slide6-object>picture>img {
+        width: 315px;
+        position: relative;
+        left: -50px
+    }
+
+    .s6>.slide-content>.slide-holder>.image-block>a.more {
+        position: relative;
+        top: 115px;
+        margin-left: 100px;
+    }
+
+    .slide7-object>picture>img {
+        width: 220px;
+        position: relative;
+        left: -50px
+    }
+
+    .s7>.slide-content>.slide-holder>.title-block {
+        margin-top: 25px;
+    }
+
+    .s7>.slide-content>.slide-holder>.image-block>a.more {
+        position: relative;
+        top: 115px;
+        margin-left: 100px;
+    }
+
+    .sReliablity>.visual>.w1>.slideReliablity {
+        background-position-y: 0%;
+        background-position-x: 100%;
+    }
+
+    .sReliablity>.slide-content>.slide-holder>.title-block>h1 {
+        line-height: 42px;
+        margin-bottom: 20px;
+    }
+
+    .sReliablity>.slide-content>.slide-holder>.title-block>span {
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+
+    .sReliablity>.slide-content>.slide-holder>.title-block>a.btn {
+        margin-left: 50px;
+    }
+
+    .contentArea {
+        text-align: center;
+    }
+
+}
+
+/* Maximum width of 639 pixels. */
+@media screen and (max-width: 639px) {}
+
+/* Minimum width of 1000 pixels. */
+@media screen and (min-width: 1000px) {
+    .endeavor .w2 {
+        min-height: 1019px;
+    }
+
+    .endeavor h1 {
+        font-size: 60px;
+    }
+
+    .endeavor p {
+        font-size: 35px;
+    }
+
+    .endeavor .object {
+        bottom: 0;
+        left: 0;
+        transform: translateX(-40%);
+    }
+
+    .lseries .w2 {
+        min-height: 1019px;
+    }
+
+    .lseries h1 {
+        font-size: 60px;
+    }
+
+    .lseries p {
+        font-size: 35px;
+    }
+
+    .lseries .object {
+        bottom: 0;
+        left: 0;
+        transform: translateX(-30%);
+    }
+
+    .taxcreds .w2 {
+        min-height: 1019px;
+    }
+
+    .taxcreds h1 {
+        font-size: 60px;
+    }
+
+    .taxcreds p {
+        font-size: 35px;
+    }
+
+    .taxcreds .object {
+        bottom: 0;
+        left: 0;
+        transform: translateX(-40%);
+    }
+
+    .sultra h1 {
+        font-size: 60px;
+    }
+
+    .sultra p br {
+        display: block;
+    }
+
+    .sultra .ultra-object {
+        transform: translateX(-35%);
+        bottom: -100px;
+    }
+
+    .sultra .ultra-object img {
+        max-width: 50vw;
+    }
+
+    .slideHybrid {
+        height: 968px;
+    }
+
+    .sHybrid .slideHybrid-object {
+        transform: translateX(-55%);
+    }
+
+    .sHybrid .title-block {
+        padding-top: 10%;
+    }
+
+    .sSRSeries .slideSRSeries-object {
+        transform: translateX(-55%);
+    }
+
+    .slide1 {
+        min-height: 970px;
+    }
+
+    .s1 .slide1-object img {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .s1 h1 {
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
+    .sComHP>.slide-content>.slide-holder>.title-block h1 {
+        font-size: 62px;
+    }
+
+    .sComHP>.slide-content>.slide-holder>.title-block {
+        width: auto;
+        margin-left: 30%;
+    }
+}
+
+/* ipad portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .slide2-object>picture>img {
+        width: 375px;
+    }
+
+    .s2>.slide-content>.slide-holder>.image-block>a.more {
+        position: relative;
+        top: 50px;
+        text-align: center;
+        width: 50%;
+    }
+
+    .slide2 {
+        background-position-x: -200px;
+    }
+
+    .slide3 {
+        background-position-x: -200px;
+    }
+
+    .slide3-object>picture>img {
+        width: 225px;
+    }
+
+    .s3>.slide-content>.slide-holder>.image-block>a.more {
+        position: relative;
+        top: 140px;
+        left: 30px;
+        text-align: center;
+        width: 50%;
+    }
+
+    .slide4-object>picture>img {
+        width: 225px;
+    }
+
+    .s4>.slide-content>.slide-holder>.image-block>a.more {
+        position: relative;
+        top: 140px;
+        left: 100px;
+        width: 65%;
+    }
+
+    .slide4 {
+        background-position-x: -200px;
+    }
+
+    .slide5-object>picture>img {
+        width: 175px;
+    }
+
+    .s5>.slide-content>.slide-holder>.image-block>a.more {
+        position: relative;
+        top: 110px;
+        left: 50px;
+        width: 50%;
+    }
+
+    .s6>.slide-content>.slide-holder>.image-block>a.more {
+        position: relative;
+        top: 140px;
+        left: -40px;
+        width: 55%;
+    }
+
+    .s7>.slide-content>.slide-holder>.image-block>a.more {
+        position: relative;
+        top: 140px;
+        left: 110px;
+        width: 65%;
+    }
+}
+
+/* ipad landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .s0>.slide-content>.slide-holder>.title-block>h1 {
+        font-size: 7rem;
+        line-height: 8rem;
+    }
+}
+
+@media (min-width: 767px) {
+    .s0>a>.slide-content>.slide-holder>.title-block>h1 {
+        font-size: 10rem;
+        line-height: 11rem;
+    }
+
+    .s0 img {
+        width: 100%;
+    }
+
+    .s0 .image-block .more {
+        margin-left: 270px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .carousel .image-block .visual {
+        width: auto;
+        vertical-align: none;
+    }
+
+    .slideSmartElectric {
+        height: 700px;
+        background-position: center right;
+    }
+
+    .sSmartElectric h1 {
+        margin-top: 20px;
+    }
+
+    .slideSmartElectric-object {
+        bottom: -145px !important;
+    }
+
+    .slideCombiBoiler {
+        height: 600px;
+    }
+
+    .sSustainability .sub-title {
+        line-height: 35px;
+    }
+
+    .sCombiBoiler .slide-content h1 span {
+        font-size: 29px;
+    }
+
+    .sReliablity h1 {
+        line-height: 44px;
+    }
+
+    .sReliablity h1 br {
+        display: none;
+    }
+
+    .sReliablity .sub-title {
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 989px) {
+    .carousel .image-block .visual {
+        width: auto;
+        float: none;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .slide0 {
+        background-image: url("https://media.ruud.com/site/ruuddotcom/_WP/img/homepage-slideshow/renaissance-bkg@2x.jpg");
+    }
+}
+
+#ua-alert-box {
+    background: #8b0e04;
+}
+
+body.ua-alert-box {
+    padding-top: 30px;
+}
+
+.topBar {
+    overflow: hidden;
+    background-color: #8b0e04;
+    background-size: cover;
+    padding: 5px;
+}
+
+.topBar select {
+    background: #8b0e04;
+    border: none;
+}
+
+@media screen and (min-width: 990px) {
+
+    .topBar .textwidget,
+    .topBar .custom-html-widget {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 989px) {
+    #ruud-country-select {
+        display: none;
+    }
+}
+
+.contentArea {
+    color: #fff;
+    padding-left: 30px;
+}
+
+.contentArea a {
+    text-decoration: underline;
+    color: #efefef;
+}
+
+.wpml-ls-statics-shortcode_actions {
+    background-color: #8b0e04;
+}
+
+.wpml-ls-legacy-list-horizontal {
+    border: none;
+    padding: 0;
+}
+
+.wpml-ls-legacy-list-horizontal a {
+    padding: 0 10px;
+}
